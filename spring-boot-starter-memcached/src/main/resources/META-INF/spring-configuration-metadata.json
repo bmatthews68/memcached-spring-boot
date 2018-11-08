@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "memcached",
+      "type": "com.buralo.spring.boot.memcached.autoconfigure.MemcachedProperties",
+      "sourceType": "com.buralo.spring.boot.memcached.autoconfigureMemcachedProperties"
+    }
+  ],
+  "properties": [
+  ],
+  "hints": []
+}
