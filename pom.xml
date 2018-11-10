@@ -11,23 +11,34 @@
 	</parent>
 
 	<groupId>com.buralo.spring.boot</groupId>
-	<artifactId>spring-boot-memcached</artifactId>
+	<artifactId>memcached-spring-boot</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Spring Boot Memcached</name>
 
 	<modules>
-		<module>spring-boot-autoconfigure-memcached</module>
-		<module>spring-boot-starter-memcached</module>
-		<module>spring-boot-starter-memcached-test</module>
+		<module>memcached-spring-boot-autoconfigure</module>
+		<module>memcached-spring-boot-starter</module>
+		<module>memcached-test-spring-boot-starter</module>
+		<module>memcached-autoconfigure-test</module>
 	</modules>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>com.buralo.spring.boot</groupId>
-				<artifactId>spring-boot-autoconfigure-memcached</artifactId>
+				<artifactId>memcached-spring-boot-autoconfigure</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.buralo.spring.boot</groupId>
+				<artifactId>memcached-spring-boot-starter</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.buralo.spring.boot</groupId>
+				<artifactId>memcached-test-spring-boot-starter</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
