@@ -1,7 +1,9 @@
 package com.buralo.spring.boot.memcached.autoconfigure;
 
+import net.spy.memcached.ConnectionFactory;
 import net.spy.memcached.MemcachedClient;
 import net.spy.memcached.MemcachedClientIF;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -28,11 +30,15 @@ public class MemcachedClientAutoConfiguration {
     @Autowired
     @Lazy
     @ConditionalOnMissingBean
-    public MemcachedClientIF memcachedClient(final MemcachedProperties properties) throws IOException {
+    public MemcachedClientIF memcachedClient(final MemcachedProperties properties,
+                                             final ObjectProvider<ConnectionFactory> connectionFactories) throws IOException {
         final List<InetSocketAddress> addresses = properties.getServers()
                 .stream()
                 .map(MemcachedClientAutoConfiguration::convert)
                 .collect(Collectors.toList());
-        return new MemcachedClient(addresses);
+        final ConnectionFactory connectionFactory = connectionFactories.getIfUnique();
+        return connectionFactory == null
+                ? new MemcachedClient(addresses)
+                : new MemcachedClient(connectionFactory, addresses);
     }
 }
