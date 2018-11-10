@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.buralo.spring.boot.memcached.autoconfigure.MemcachedClientAutoConfiguration,\
+  com.buralo.spring.boot.memcached.autoconfigure.MemcachedEmbeddedServerAutoConfiguration
