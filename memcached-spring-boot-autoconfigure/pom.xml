@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.buralo.spring.boot</groupId>
+        <groupId>com.buralo.spring.boot.memcached</groupId>
         <artifactId>memcached-spring-boot</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>

@@ -10,7 +10,7 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>com.buralo.spring.boot</groupId>
+	<groupId>com.buralo.spring.boot.memcached</groupId>
 	<artifactId>memcached-spring-boot</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -27,17 +27,17 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>com.buralo.spring.boot</groupId>
+				<groupId>com.buralo.spring.boot.memcached</groupId>
 				<artifactId>memcached-spring-boot-autoconfigure</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.buralo.spring.boot</groupId>
+				<groupId>com.buralo.spring.boot.memcached</groupId>
 				<artifactId>memcached-spring-boot-starter</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.buralo.spring.boot</groupId>
+				<groupId>com.buralo.spring.boot.memcached</groupId>
 				<artifactId>memcached-test-spring-boot-starter</artifactId>
 				<version>${project.version}</version>
 			</dependency>
